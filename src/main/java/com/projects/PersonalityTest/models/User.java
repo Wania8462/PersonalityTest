@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Email;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -15,7 +17,7 @@ public class User {
     @Column(nullable = false)
     private String firstname;
     @Column(nullable = false)
-    private String lastName;
+    private String lastname;
     @Column(nullable = false)
     @Email(message = "Email is incorrect")
     private String email;
@@ -26,18 +28,21 @@ public class User {
     @JoinColumn(name = "results_id", referencedColumnName = "id")
     private UserResults results;
 
-    public User(String firstname, String lastName, String email, int phone, UserResults results) {
-        this.firstname = firstname;
-        this.lastName = lastName;
-        this.email = email;
-        this.phone = phone;
-        this.results = results;
-    }
+    @OneToMany(mappedBy = "user")
+    private List<Answer> answer;
 
     public User(String firstname, String lastName, String email, int phone) {
         this.firstname = firstname;
-        this.lastName = lastName;
+        this.lastname = lastName;
         this.email = email;
         this.phone = phone;
+    }
+
+    public User(String firstname, String lastName, String email, int phone, UserResults results) {
+        this.firstname = firstname;
+        this.lastname = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.results = results;
     }
 }

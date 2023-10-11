@@ -12,11 +12,11 @@ public class UserResults {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int openness;
-    private int painstakingness;
-    private int extroversion;
-    private int accommodation;
-    private int neuroticism;
+    private float openness;
+    private float painstakingness;
+    private float extroversion;
+    private float accommodation;
+    private float neuroticism;
 
     @OneToOne(mappedBy = "results")
     private User user;
