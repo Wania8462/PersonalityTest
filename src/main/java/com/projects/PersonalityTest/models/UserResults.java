@@ -21,7 +21,7 @@ public class UserResults {
     @OneToOne(mappedBy = "results")
     private User user;
 
-    public UserResults(int openness, int painstakingness, int extroversion, int accommodation, int neuroticism, User user) {
+    public UserResults(float openness, float painstakingness, float extroversion, float accommodation, float neuroticism, User user) {
         this.openness = openness;
         this.painstakingness = painstakingness;
         this.extroversion = extroversion;

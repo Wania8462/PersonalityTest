@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface UserResultsService {
     UserResults save(UserResults results, Long userId) throws Exception;
-    UserResults update(UserResults results, User user);
-    UserResults getById(Long id);
+    UserResults update(UserResults results, User user) throws Exception;
+    UserResults getById(Long id) throws Exception;
     UserResults getByUser(User user);
     List<UserResults> getAll();
     boolean deleteById(Long id);

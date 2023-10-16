@@ -1,9 +1,6 @@
 package com.projects.PersonalityTest.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,11 +8,24 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Answer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private int answer;
+
+    @Column(nullable = false, updatable = false)
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
+
+    @Column(nullable = false, updatable = false)
     @ManyToOne
     @JoinColumn(name = "question_id", referencedColumnName = "id")
     private Question question;
+
+    public Answer(int answer, User user, Question question) {
+        this.answer = answer;
+        this.user = user;
+        this.question = question;
+    }
 }

@@ -21,14 +21,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User save(User user) {
-        User newUser = new User(
-                user.getFirstname(),
-                user.getLastname(),
-                user.getEmail(),
-                user.getPhone()
-        );
-
-        return userRepository.save(newUser);
+        return userRepository.save(user);
     }
 
     @Override
@@ -48,7 +41,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getById(Long id) throws Exception {
         return userRepository.findById(id).orElseThrow(()-> {
-            return new Exception("No value present in Optional object");
+            return new Exception("No value present in Optional object. Type = User");
         });
     }
 

@@ -21,4 +21,11 @@ public class Question {
     @ManyToOne
     @JoinColumn(name = "question_id", referencedColumnName = "id")
     private Test test;
+
+    public Question(String questionText, int position, List<Answer> answers, Test test) {
+        this.questionText = questionText;
+        this.position = position;
+        this.answers = answers;
+        this.test = test;
+    }
 }
