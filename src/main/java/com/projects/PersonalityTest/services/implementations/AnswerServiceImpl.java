@@ -6,9 +6,11 @@ import com.projects.PersonalityTest.services.AnswerService;
 import com.projects.PersonalityTest.services.QuestionService;
 import com.projects.PersonalityTest.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AnswerServiceImpl implements AnswerService {
 
     private final AnswerRepository answerRepository;

@@ -10,23 +10,22 @@ import lombok.Value;
 @NoArgsConstructor
 public class UserResults {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @OneToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+
     private float openness;
     private float painstakingness;
     private float extroversion;
     private float accommodation;
     private float neuroticism;
 
-    @OneToOne(mappedBy = "results")
-    private User user;
-
-    public UserResults(float openness, float painstakingness, float extroversion, float accommodation, float neuroticism, User user) {
+    public UserResults(User user, float openness, float painstakingness, float extroversion, float accommodation, float neuroticism) {
+        this.user = user;
         this.openness = openness;
         this.painstakingness = painstakingness;
         this.extroversion = extroversion;
         this.accommodation = accommodation;
         this.neuroticism = neuroticism;
-        this.user = user;
     }
 }

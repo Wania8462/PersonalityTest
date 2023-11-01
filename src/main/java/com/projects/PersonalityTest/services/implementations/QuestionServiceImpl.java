@@ -6,9 +6,11 @@ import com.projects.PersonalityTest.repositories.QuestionRepository;
 import com.projects.PersonalityTest.services.QuestionService;
 import com.projects.PersonalityTest.services.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class QuestionServiceImpl implements QuestionService {
 
     private final QuestionRepository questionRepository;
@@ -33,13 +35,12 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public Question update(Question question, Long test_id) throws Exception {
-        Question updatedQuestion = new Question(
-                question.getQuestionText(),
-                question.getPosition(),
-                question.getAnswers(),
-                testService.getById(test_id)
-        );
+    public Question update(Long id, Question question, Long test_id) throws Exception {
+        Question updatedQuestion = getById(id);
+        updatedQuestion.setQuestionText(question.getQuestionText());
+        updatedQuestion.setPosition(question.getPosition());
+        updatedQuestion.setAnswers(question.getAnswers());
+        updatedQuestion.setTest(testService.getById(test_id));
 
         return questionRepository.save(updatedQuestion);
     }

@@ -5,9 +5,11 @@ import com.projects.PersonalityTest.repositories.UserRepository;
 import com.projects.PersonalityTest.services.UserResultsService;
 import com.projects.PersonalityTest.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
@@ -25,7 +27,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User update(User user, Long id, Long resultsId) throws Exception {
+    public User update(Long id, User user, Long resultsId) throws Exception {
         User updatedUser = getById(id);
         updatedUser.setFirstname(user.getFirstname());
         updatedUser.setLastname(user.getLastname());

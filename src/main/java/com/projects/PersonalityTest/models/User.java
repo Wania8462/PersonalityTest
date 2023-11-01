@@ -14,18 +14,21 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String firstname;
+
     @Column(nullable = false)
     private String lastname;
+
     @Column(nullable = false)
     @Email(message = "Email is incorrect")
     private String email;
+
     @Column(nullable = false, length = 13)
     private int phone;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "results_id", referencedColumnName = "id")
+    @OneToOne(mappedBy = "user")
     private UserResults results;
 
     @OneToMany(mappedBy = "user")

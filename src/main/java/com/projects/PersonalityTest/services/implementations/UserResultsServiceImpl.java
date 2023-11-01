@@ -6,9 +6,11 @@ import com.projects.PersonalityTest.repositories.UserResultsRepository;
 import com.projects.PersonalityTest.services.UserResultsService;
 import com.projects.PersonalityTest.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserResultsServiceImpl implements UserResultsService {
 
     private final UserResultsRepository userResultsRepository;
@@ -23,40 +25,32 @@ public class UserResultsServiceImpl implements UserResultsService {
     @Override
     public UserResults save(UserResults results, Long userId) throws Exception {
         UserResults newUserResults = new UserResults(
+                userService.getById(userId),
                 results.getOpenness(),
                 results.getPainstakingness(),
                 results.getExtroversion(),
                 results.getAccommodation(),
-                results.getNeuroticism(),
-                userService.getById(userId)
+                results.getNeuroticism()
         );
 
         return userResultsRepository.save(newUserResults);
     }
 
     @Override
-    public UserResults update(UserResults results, User user) throws Exception {
-        UserResults updatedResults = getById(results.getId());
+    public UserResults update(UserResults results, Long userId) throws Exception {
+        UserResults updatedResults = getById(userId);
         updatedResults.setOpenness(results.getOpenness());
         updatedResults.setPainstakingness(results.getPainstakingness());
         updatedResults.setExtroversion(results.getExtroversion());
         updatedResults.setAccommodation(results.getAccommodation());
         updatedResults.setNeuroticism(results.getNeuroticism());
-        updatedResults.setUser(results.getUser());
 
         return userResultsRepository.save(updatedResults);
     }
 
     @Override
-    public UserResults getById(Long id) throws Exception {
-        return userResultsRepository.findById(id).orElseThrow(()-> {
-            return new Exception("No value present in Optional object. Type = UserResults");
-        });
-    }
-
-    @Override
-    public UserResults getByUser(User user) {
-        return userResultsRepository.findByUser(user);
+    public UserResults getById(Long userId) throws Exception{
+        return userResultsRepository.findByUser(userService.getById(userId));
     }
 
     @Override

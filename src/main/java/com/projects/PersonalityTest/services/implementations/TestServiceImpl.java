@@ -6,10 +6,12 @@ import com.projects.PersonalityTest.repositories.TestRepository;
 import com.projects.PersonalityTest.services.QuestionService;
 import com.projects.PersonalityTest.services.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class TestServiceImpl implements TestService {
 
     private final TestRepository testRepository;

@@ -13,14 +13,12 @@ public class Answer {
     private Long id;
     private int answer;
 
-    @Column(nullable = false, updatable = false)
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false, updatable = false)
     private User user;
 
-    @Column(nullable = false, updatable = false)
     @ManyToOne
-    @JoinColumn(name = "question_id", referencedColumnName = "id")
+    @JoinColumn(name = "question_id", referencedColumnName = "id", nullable = false, updatable = false)
     private Question question;
 
     public Answer(int answer, User user, Question question) {

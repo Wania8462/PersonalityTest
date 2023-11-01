@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService {
     User save(User user);
-    User update(User user, Long id, Long resultsId) throws Exception;
+    User update(Long id, User user, Long resultsId) throws Exception;
 
     User getById(Long id) throws Exception;
     User getByFirstname(String firstname);
