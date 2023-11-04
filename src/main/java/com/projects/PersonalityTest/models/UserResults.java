@@ -9,7 +9,7 @@ import lombok.Value;
 @Data
 @NoArgsConstructor
 public class UserResults {
-    @Id
+    @IdClass(User.class)
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;

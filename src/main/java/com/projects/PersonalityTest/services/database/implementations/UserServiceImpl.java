@@ -1,9 +1,9 @@
-package com.projects.PersonalityTest.services.implementations;
+package com.projects.PersonalityTest.services.database.implementations;
 
 import com.projects.PersonalityTest.models.User;
 import com.projects.PersonalityTest.repositories.UserRepository;
-import com.projects.PersonalityTest.services.UserResultsService;
-import com.projects.PersonalityTest.services.UserService;
+import com.projects.PersonalityTest.services.database.UserResultsService;
+import com.projects.PersonalityTest.services.database.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

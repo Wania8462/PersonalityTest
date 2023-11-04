@@ -1,4 +1,4 @@
-package com.projects.PersonalityTest.services;
+package com.projects.PersonalityTest.services.database;
 
 import com.projects.PersonalityTest.models.User;
 import com.projects.PersonalityTest.models.UserResults;

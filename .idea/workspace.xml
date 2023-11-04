@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9f538-96fd-4eed-b36f-0a5a8b176e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Answer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/UserResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/UserResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserResultsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserResultsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/AnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/AnswerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/TestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserResultsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserResultsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/PersonalityTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/PersonalityTestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/AnswerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/AnswerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/QuestionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/TestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/TestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserResultsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserResultsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/AnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/AnswerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/QuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserResultsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/UserResultsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/AnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/AnswerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/QuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/TestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserResultsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/UserResultsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +100,9 @@
       <workItem from="1697647760945" duration="95000" />
       <workItem from="1697660743828" duration="270000" />
       <workItem from="1698237194300" duration="2705000" />
+      <workItem from="1698867127130" duration="878000" />
+      <workItem from="1698868030009" duration="88000" />
+      <workItem from="1698868258955" duration="735000" />
     </task>
     <servers />
   </component>
