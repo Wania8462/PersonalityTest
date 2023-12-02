@@ -18,14 +18,9 @@ public class Question {
     @OneToMany(mappedBy = "question")
     private List<Answer> answers;
 
-    @ManyToOne
-    @JoinColumn(name = "question_id", referencedColumnName = "id")
-    private Test test;
-
-    public Question(String questionText, int position, List<Answer> answers, Test test) {
+    public Question(String questionText, int position, List<Answer> answers) {
         this.questionText = questionText;
         this.position = position;
         this.answers = answers;
-        this.test = test;
     }
 }

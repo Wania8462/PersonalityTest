@@ -1,33 +1,26 @@
-package com.projects.PersonalityTest.services.database.implementations;
+package com.projects.PersonalityTest.services.implementations;
 
 import com.projects.PersonalityTest.models.Question;
 import com.projects.PersonalityTest.repositories.QuestionRepository;
-import com.projects.PersonalityTest.services.database.QuestionService;
-import com.projects.PersonalityTest.services.database.TestService;
+import com.projects.PersonalityTest.services.QuestionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 @Service
 public class QuestionServiceImpl implements QuestionService {
 
     private final QuestionRepository questionRepository;
-    private final TestService testService;
-
-    @Autowired
-    public QuestionServiceImpl(QuestionRepository questionRepository, TestService testService) {
-        this.questionRepository = questionRepository;
-        this.testService = testService;
-    }
 
     @Override
     public Question save(Question question, Long test_id) throws Exception {
         Question newQuestion = new Question(
                 question.getQuestionText(),
                 question.getPosition(),
-                question.getAnswers(),
-                testService.getById(test_id)
+                question.getAnswers()
         );
 
         return questionRepository.save(newQuestion);
@@ -39,7 +32,6 @@ public class QuestionServiceImpl implements QuestionService {
         updatedQuestion.setQuestionText(question.getQuestionText());
         updatedQuestion.setPosition(question.getPosition());
         updatedQuestion.setAnswers(question.getAnswers());
-        updatedQuestion.setTest(testService.getById(test_id));
 
         return questionRepository.save(updatedQuestion);
     }

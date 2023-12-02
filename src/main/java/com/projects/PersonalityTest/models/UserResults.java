@@ -1,17 +1,19 @@
 package com.projects.PersonalityTest.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.Value;
+import lombok.*;
 
-@Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
 public class UserResults {
-    @IdClass(User.class)
-    @OneToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToOne(mappedBy = "results")
     private User user;
 
     private float openness;

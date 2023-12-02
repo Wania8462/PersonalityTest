@@ -1,9 +1,6 @@
-package com.projects.PersonalityTest.services.database;
+package com.projects.PersonalityTest.services;
 
 import com.projects.PersonalityTest.models.Question;
-import com.projects.PersonalityTest.models.Test;
-import com.projects.PersonalityTest.models.User;
-import com.projects.PersonalityTest.models.UserResults;
 
 import java.util.List;
 

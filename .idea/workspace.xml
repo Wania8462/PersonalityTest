@@ -5,24 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9f538-96fd-4eed-b36f-0a5a8b176e15" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/images/Sunflower_from_Silesia2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/UserResultsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/request/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/request/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/response/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/enums/ERole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec/storage_v2/_src_/schema/personalitytestdb.fjSgpA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec/storage_v2/_src_/schema/personalitytestdb.fjSgpA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/PersonalityTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/PersonalityTestApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/AnswerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/AnswerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/TestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/TestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/UserResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/UserResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/TestRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserResultsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/UserResultsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/AnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/AnswerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserResultsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/UserResultsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/AnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/AnswerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/TestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserResultsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/UserResultsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/AnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/AnswerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/QuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/TestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/UserResultsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserResultsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/AnswerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/AnswerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/QuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/TestServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/UserResultsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserResultsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/database/implementations/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +100,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -83,6 +109,21 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.projects.PersonalityTest.security" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PersonalityTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="PersonalityTest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.projects.PersonalityTest.PersonalityTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,6 +144,15 @@
       <workItem from="1698867127130" duration="878000" />
       <workItem from="1698868030009" duration="88000" />
       <workItem from="1698868258955" duration="735000" />
+      <workItem from="1699095708740" duration="245000" />
+      <workItem from="1700075206518" duration="22000" />
+      <workItem from="1700679726725" duration="3887000" />
+      <workItem from="1700913987395" duration="11312000" />
+      <workItem from="1701000633049" duration="7000" />
+      <workItem from="1701017925637" duration="1000" />
+      <workItem from="1701019975998" duration="3725000" />
+      <workItem from="1701280910866" duration="8000" />
+      <workItem from="1701519295824" duration="156000" />
     </task>
     <servers />
   </component>
