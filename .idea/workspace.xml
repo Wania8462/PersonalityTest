@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9f538-96fd-4eed-b36f-0a5a8b176e15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec/storage_v2/_src_/schema/personalitytestdb.fjSgpA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec/storage_v2/_src_/schema/personalitytestdb.fjSgpA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec/storage_v2/_src_/schema/sakila.oXLGyQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/91c342d3-9e6a-4635-ba92-c1a33f9023ec/storage_v2/_src_/schema/sakila.oXLGyQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +118,38 @@
       <workItem from="1701019975998" duration="3725000" />
       <workItem from="1701280910866" duration="8000" />
       <workItem from="1701519295824" duration="156000" />
-      <workItem from="1701519462728" duration="404000" />
+      <workItem from="1701519462728" duration="827000" />
+      <workItem from="1701538564602" duration="2000" />
+      <workItem from="1701539128573" duration="6210000" />
+      <workItem from="1701885730033" duration="73000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/UserController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/UserController.java</url>
+          <line>20</line>
+          <properties class="com.projects.PersonalityTest.controller.UserController" method="register">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

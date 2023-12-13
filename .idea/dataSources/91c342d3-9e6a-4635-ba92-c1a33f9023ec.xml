@@ -1027,8 +1027,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="294" parent="1" name="personalitytestdb">
-      <IntrospectionTimestamp>2023-11-26.23:54:29</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-26.23:54:29</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-12-03.13:42:23</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-12-03.13:42:23</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="295" parent="1" name="karvesdb">

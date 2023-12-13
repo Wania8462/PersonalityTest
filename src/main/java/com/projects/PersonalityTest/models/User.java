@@ -2,7 +2,7 @@ package com.projects.PersonalityTest.models;
 
 import com.projects.PersonalityTest.models.enums.ERole;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
+//import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,7 +28,7 @@ public class User {
     private String lastname;
 
     @Column(nullable = false, unique = true)
-    @Email(message = "Email is incorrect")
+//    @Email(message = "Email is incorrect")
     private String email;
 
     @Column(nullable = false, length = 13)

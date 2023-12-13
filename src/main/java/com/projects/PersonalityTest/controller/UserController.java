@@ -1,5 +1,6 @@
 package com.projects.PersonalityTest.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.projects.PersonalityTest.dto.UserDTO;
 import com.projects.PersonalityTest.models.User;
 import com.projects.PersonalityTest.services.UserService;
@@ -18,7 +19,6 @@ public class UserController {
 
     @PostMapping("/register")
     public User register(@RequestBody UserDTO userDTO) {
-        System.out.println(userDTO);
         return userService.create(userDTO);
     }
 }

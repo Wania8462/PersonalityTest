@@ -9,6 +9,8 @@ function Register() {
         phone: ''
     });
 
+    const [firstname, setFirstname] = useState('No firstname');
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -19,13 +21,55 @@ function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission here, e.g., send data to an API
-        console.log(formData);
+        // const url = 'http://localhost:8080/api/v1/register';
+        // console.log(JSON.stringify(formData));
+
+        // fetch(url, {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(formData),
+        //     redirect: 'follow'
+        // })
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         console.log(data);
+        //         setFirstname(data.firstname);
+        //     })
+        //     .catch(error => {
+        //         console.error('There was a problem with the fetch operation:', error);
+        //     });
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+            "firstname": "James",
+            "lastname": "Bond",
+            "email": "JamesBond@gmail.com",
+            "phone": "777777777777"
+        });
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:8080/api/v1/register", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
     };
 
     return (
         <div className="registration-form">
-            <h2>Кто ты?</h2>
+            <h2>{firstname}</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="firstname">Имя:</label>
@@ -71,31 +115,7 @@ function Register() {
                         required
                     />
                 </div>
-                <button type="submit"
-                    onClick={() => {
-                        const url = 'http://localhost:8080/api/v1/register';
-
-                        fetch(url, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(formData)
-                        })
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error('Network response was not ok');
-                                }
-                                return response.json();
-                            })
-                            .then(data => {
-                                // Handle the response data
-                                console.log('Response:', data);
-                            })
-                            .catch(error => {
-                                // Handle errors that occurred during the fetch
-                                console.error('There was a problem with the fetch operation:', error);
-                            });
-                    }}
-                >Далее</button>
+                <button type="submit">Далее</button>
             </form>
         </div>
     );
