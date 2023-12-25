@@ -15,6 +15,9 @@
 	<description>Personality test</description>
 	<properties>
 		<java.version>17</java.version>
+		<jsonwebtoken>0.11.5</jsonwebtoken>
+		<jakarta>3.0.2</jakarta>
+		<modelmapper>3.1.1</modelmapper>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -52,36 +55,35 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>org.modelmapper</groupId>
-			<artifactId>modelmapper</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-<!--		<dependency>-->
-<!--			<groupId>io.jsonwebtoken</groupId>-->
-<!--			<artifactId>jjwt-api</artifactId>-->
-<!--			<version>0.11.5</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.jsonwebtoken</groupId>-->
-<!--			<artifactId>jjwt-impl</artifactId>-->
-<!--			<version>0.11.5</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.jsonwebtoken</groupId>-->
-<!--			<artifactId>jjwt-jackson</artifactId>-->
-<!--			<version>0.11.5</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>jakarta.validation</groupId>-->
-<!--			<artifactId>jakarta.validation-api</artifactId>-->
-<!--			<version>3.0.2</version>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>${jsonwebtoken}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>${jsonwebtoken}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>${jsonwebtoken}</version>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>${jakarta}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>${modelmapper}</version>
+		</dependency>
 	</dependencies>
 
 	<build>

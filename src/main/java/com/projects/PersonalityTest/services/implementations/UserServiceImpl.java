@@ -66,12 +66,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getByFirstname(String firstname) {
-        return userRepository.findAllByFirstname(firstname);
+        return userRepository.findAllByFirstname(firstname).orElseThrow(
+                () -> new UserNotFoundException("User not found by firstname: " + firstname)
+        );
     }
 
     @Override
     public List<User> getByLastname(String lastname) {
-        return userRepository.findAllByFirstname(lastname);
+        return userRepository.findAllByLastname(lastname).orElseThrow(
+                () -> new UserNotFoundException("User not found by lastname: " + lastname)
+        );
     }
 
     @Override
@@ -81,7 +85,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(Long id) {
-        User user = getById(id);
-        userRepository.delete(user);
+        userRepository.deleteById(id);
     }
 }

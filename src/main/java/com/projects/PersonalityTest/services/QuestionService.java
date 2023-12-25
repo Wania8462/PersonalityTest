@@ -1,13 +1,15 @@
 package com.projects.PersonalityTest.services;
 
+import com.projects.PersonalityTest.dto.QuestionDTO;
+import com.projects.PersonalityTest.dto.request.QuestionRequest;
 import com.projects.PersonalityTest.models.Question;
 
 import java.util.List;
 
 public interface QuestionService {
-    Question save(Question question, Long test_id) throws Exception;
-    Question update(Long id, Question question, Long test_id) throws Exception;
-    Question getById(Long id) throws Exception;
+    Question save(Question question);
+    Question create(QuestionRequest questionRequest);
+    Question getById(Long id);
     List<Question> getAll();
-    boolean deleteById(Long id);
+    void deleteById(Long id);
 }

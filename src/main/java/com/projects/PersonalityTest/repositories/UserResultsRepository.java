@@ -5,7 +5,9 @@ import com.projects.PersonalityTest.models.UserResults;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface UserResultsRepository extends JpaRepository<UserResults, Long> {
-    UserResults findByUser(User user);
+    Optional<UserResults> findByUser(User user);
 }

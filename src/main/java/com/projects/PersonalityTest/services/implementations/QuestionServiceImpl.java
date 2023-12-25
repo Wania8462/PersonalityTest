@@ -1,5 +1,8 @@
 package com.projects.PersonalityTest.services.implementations;
 
+import com.projects.PersonalityTest.dto.QuestionDTO;
+import com.projects.PersonalityTest.dto.request.QuestionRequest;
+import com.projects.PersonalityTest.exception.QuestionNotFoundException;
 import com.projects.PersonalityTest.models.Question;
 import com.projects.PersonalityTest.repositories.QuestionRepository;
 import com.projects.PersonalityTest.services.QuestionService;
@@ -7,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -16,7 +20,7 @@ public class QuestionServiceImpl implements QuestionService {
     private final QuestionRepository questionRepository;
 
     @Override
-    public Question save(Question question, Long test_id) throws Exception {
+    public Question save(Question question) {
         Question newQuestion = new Question(
                 question.getQuestionText(),
                 question.getPosition(),
@@ -27,20 +31,21 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public Question update(Long id, Question question, Long test_id) throws Exception {
-        Question updatedQuestion = getById(id);
-        updatedQuestion.setQuestionText(question.getQuestionText());
-        updatedQuestion.setPosition(question.getPosition());
-        updatedQuestion.setAnswers(question.getAnswers());
+    public Question create(QuestionRequest questionRequest) {
+        Question question = Question.builder()
+                .questionText(questionRequest.getQuestionText())
+                .position(questionRequest.getPosition())
+                .answers(new ArrayList<>())
+                .build();
 
-        return questionRepository.save(updatedQuestion);
+        return questionRepository.save(question);
     }
 
     @Override
-    public Question getById(Long id) throws Exception {
-        return questionRepository.findById(id).orElseThrow(()-> {
-            return new Exception("No value present in Optional object. Type = Question");
-        });
+    public Question getById(Long id) {
+        return questionRepository.findById(id).orElseThrow(
+                () -> new QuestionNotFoundException("Question bot found by id: " + id)
+        );
     }
 
     @Override
@@ -49,15 +54,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public boolean deleteById(Long id) {
+    public void deleteById(Long id) {
         questionRepository.deleteById(id);
-
-        try {
-            getById(id);
-        } catch (Exception e) {
-            return false;
-        }
-
-        return true;
     }
 }

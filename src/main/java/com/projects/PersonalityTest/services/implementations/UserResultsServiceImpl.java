@@ -1,6 +1,7 @@
 package com.projects.PersonalityTest.services.implementations;
 
 import com.projects.PersonalityTest.dto.UserResultsDTO;
+import com.projects.PersonalityTest.exception.UserResultsNotFoundException;
 import com.projects.PersonalityTest.models.User;
 import com.projects.PersonalityTest.models.UserResults;
 import com.projects.PersonalityTest.repositories.UserResultsRepository;
@@ -50,8 +51,10 @@ public class UserResultsServiceImpl implements UserResultsService {
     }
 
     @Override
-    public UserResults getById(Long userId){
-        return userResultsRepository.findByUser(userService.getById(userId));
+    public UserResults getById(Long userId) {
+        return userResultsRepository.findByUser(userService.getById(userId)).orElseThrow(
+                () -> new UserResultsNotFoundException("User results mot found by id: " + userId)
+        );
     }
 
     @Override
@@ -61,7 +64,6 @@ public class UserResultsServiceImpl implements UserResultsService {
 
     @Override
     public void delete(Long id) {
-        UserResults userResults = getById(id);
-        userResultsRepository.delete(userResults);
+        userResultsRepository.deleteById(id);
     }
 }

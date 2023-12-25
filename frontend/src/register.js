@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import ReactDOM from "react-dom";
+
 import './register.css';
+import Question from './question';
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -8,8 +11,6 @@ function Register() {
         email: '',
         phone: ''
     });
-
-    const [firstname, setFirstname] = useState('No firstname');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,55 +22,38 @@ function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const url = 'http://localhost:8080/api/v1/register';
-        // console.log(JSON.stringify(formData));
+        const url = 'http://localhost:8080/api/v1/register';
+        console.log(JSON.stringify(formData));
 
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(formData),
-        //     redirect: 'follow'
-        // })
-        //     .then(response => {
-        //         if (!response.ok) {
-        //             throw new Error('Network response was not ok');
-        //         }
-        //         return response.json();
-        //     })
-        //     .then(data => {
-        //         console.log(data);
-        //         setFirstname(data.firstname);
-        //     })
-        //     .catch(error => {
-        //         console.error('There was a problem with the fetch operation:', error);
-        //     });
-
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-
-        var raw = JSON.stringify({
-            "firstname": "James",
-            "lastname": "Bond",
-            "email": "JamesBond@gmail.com",
-            "phone": "777777777777"
-        });
-
-        var requestOptions = {
+        fetch(url, {
             method: 'POST',
-            headers: myHeaders,
-            body: raw,
+            headers: { 
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+                'Access-Control-Allow-Origin': 'http://localhost:3000'
+            },
+            body: JSON.stringify(formData),
             redirect: 'follow'
-        };
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
 
-        fetch("http://localhost:8080/api/v1/register", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+        ReactDOM.render(<Question/>, document.getElementById("root"))
     };
 
     return (
         <div className="registration-form">
-            <h2>{firstname}</h2>
+            <h2>Регестрация</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="firstname">Имя:</label>

@@ -1,15 +1,20 @@
 package com.projects.PersonalityTest.services.implementations;
 
+import com.projects.PersonalityTest.exception.AnswerNotFoundException;
 import com.projects.PersonalityTest.models.Answer;
+import com.projects.PersonalityTest.models.Question;
+import com.projects.PersonalityTest.models.User;
 import com.projects.PersonalityTest.repositories.AnswerRepository;
 import com.projects.PersonalityTest.services.AnswerService;
 import com.projects.PersonalityTest.services.QuestionService;
 import com.projects.PersonalityTest.services.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 @Service
 public class AnswerServiceImpl implements AnswerService {
 
@@ -17,26 +22,22 @@ public class AnswerServiceImpl implements AnswerService {
     private final UserService userService;
     private final QuestionService questionService;
 
-    @Autowired
-    public AnswerServiceImpl(AnswerRepository answerRepository, UserService userService, QuestionService questionService) {
-        this.answerRepository = answerRepository;
-        this.userService = userService;
-        this.questionService = questionService;
-    }
-
     @Override
-    public Answer save(Answer answer, Long user_id, Long question_id) throws Exception {
-        Answer newAnswer = new Answer(
-                answer.getAnswer(),
-                userService.getById(user_id),
-                questionService.getById(question_id)
-        );
+    public Answer save(Answer answer, Long user_id, Long question_id) {
+        User user = userService.getById(user_id);
+        Question question = questionService.getById(question_id);
+
+        Answer newAnswer = Answer.builder()
+                .answer(answer.getAnswer())
+                .user(user)
+                .question(question)
+                .build();
 
         return answerRepository.save(newAnswer);
     }
 
     @Override
-    public Answer update(Long id, int answer) throws Exception {
+    public Answer update(Long id, int answer) {
         Answer updatedAnswer = getById(id);
         updatedAnswer.setAnswer(answer);
 
@@ -44,37 +45,28 @@ public class AnswerServiceImpl implements AnswerService {
     }
 
     @Override
-    public Answer getById(Long id) throws Exception {
-        return answerRepository.findById(id).orElseThrow(()-> {
-            return new Exception("No value present in Optional object. Type = Answer");
-        });
+    public Answer getById(Long id) {
+        return answerRepository.findById(id).orElseThrow(
+                () -> new AnswerNotFoundException("Answer not found by id: " + id)
+        );
     }
 
     @Override
-    public List<Answer> getByUser(Long user_id) throws Exception {
-        return answerRepository.findByUser(userService.getById(user_id));
+    public List<Answer> getByUser(Long user_id) {
+        return answerRepository.findByUser_id(user_id).orElseThrow(
+                () -> new AnswerNotFoundException("No answers found for user with id: " + user_id)
+        );
     }
 
     @Override
-    public List<Answer> getByQuestion(Long question_id) throws Exception {
-        return answerRepository.findByQuestion(questionService.getById(question_id));
+    public List<Answer> getByQuestion(Long question_id) {
+        return answerRepository.findByQuestion_id(question_id).orElseThrow(
+                () -> new AnswerNotFoundException("No answers found for question with id: " + question_id)
+        );
     }
 
     @Override
-    public List<Answer> getAll() {
-        return answerRepository.findAll();
-    }
-
-    @Override
-    public boolean deleteById(Long id) throws Exception {
+    public void deleteById(Long id) {
         answerRepository.deleteById(id);
-
-        try {
-            getById(id);
-        } catch (Exception e) {
-            return false;
-        }
-
-        return true;
     }
 }

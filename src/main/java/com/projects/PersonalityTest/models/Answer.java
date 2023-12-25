@@ -1,12 +1,16 @@
 package com.projects.PersonalityTest.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
+@Builder
+@AllArgsConstructor
 @Data
 @NoArgsConstructor
+@Entity
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,11 +18,11 @@ public class Answer {
     private int answer;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false, updatable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "question_id", referencedColumnName = "id", nullable = false, updatable = false)
+    @JoinColumn(name = "question_id", referencedColumnName = "id")
     private Question question;
 
     public Answer(int answer, User user, Question question) {

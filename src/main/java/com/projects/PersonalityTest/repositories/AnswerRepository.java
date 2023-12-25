@@ -7,9 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface AnswerRepository extends JpaRepository<Answer, Long> {
-    List<Answer> findByUser(User user);
-    List<Answer> findByQuestion(Question question);
+    Optional<List<Answer>> findByUser_id(Long user_id);
+    Optional<List<Answer>> findByQuestion_id(Long question_id);
 }
