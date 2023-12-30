@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import ReactDOM from "react-dom";
 
 import './register.css';
-import Question from './question';
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -48,7 +46,7 @@ function Register() {
                 console.error('There was a problem with the fetch operation:', error);
             });
 
-        ReactDOM.render(<Question/>, document.getElementById("root"))
+        // load questions
     };
 
     return (

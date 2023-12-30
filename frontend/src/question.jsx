@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import ReactDOM from "react-dom";
-
 function Question() {
 
     const [questionNumber, setQuestionNumber] = useState(1);
