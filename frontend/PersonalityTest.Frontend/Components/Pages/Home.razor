@@ -1,0 +1,31 @@
+﻿@page "/"
+@using PersonalityTest.Frontend.Clients
+@using PersonalityTest.Frontend.Models
+@rendermode InteractiveServer
+@inject NavigationManager NavManager
+@inject IClient BackEndClient
+@inject IUserSessions UserSessions
+@inject NavigationManager UriHelper
+
+<head>
+    <PageTitle>Home page</PageTitle>
+</head>
+
+<div class="centerBox">
+    <button class="btn btn-primary" @onclick="StartTest">Test</button>
+    <a class="btn btn-primary" role="button" href="/question">Test</a>
+    <h1><code>/question</code></h1>
+</div>
+
+@code {
+    private int id = 4;
+    private string userId = "TODOProvideUserId";
+
+    private async void StartTest() {
+        var state = UserSessions.AddUserState(userId);
+        var questionnaire = await BackEndClient.GetQuestionnaire("test");
+        state.StartTest(questionnaire);
+
+        NavManager.NavigateTo("/question");
+    }
+}

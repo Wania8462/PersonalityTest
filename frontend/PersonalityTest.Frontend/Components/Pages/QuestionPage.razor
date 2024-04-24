@@ -1,0 +1,34 @@
+@page "/question"
+@using PersonalityTest.Frontend.Models
+@inject IUserSessions UserSessions
+@inject NavigationManager NavManager
+
+<head>
+    <PageTitle>Question page</PageTitle>
+</head>
+
+<h1>@QuestionText</h1>
+
+@code {
+    public int id { get; set; }
+
+    private string userId = "TODOProvideUserId";
+
+    public string QuestionText {get; set;}
+
+    protected override void OnInitialized()
+    {
+        var session = UserSessions.GetUserState(userId);
+        if (session == null) {
+            NavManager.NavigateTo("/");
+            return;
+        }
+
+        var question = session.GetNextQuestion();
+        if (question == null) {
+            // TODO: end of test, store results
+        }
+
+        QuestionText = question.Text;
+    }
+}    
