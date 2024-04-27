@@ -18,13 +18,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/question")
 public class QuestionController {
-    private static QuestionService questionService;
+    private final QuestionService questionService;
     private final ModelMapper modelMapper;
 
     @PostMapping
     public ResponseEntity<QuestionDTO> create(@RequestBody QuestionRequest questionRequest) {
         return new ResponseEntity<>(
-                map(questionService.create(questionRequest)),
+                map(questionService.save(questionRequest)),
                 HttpStatus.CREATED
         );
     }

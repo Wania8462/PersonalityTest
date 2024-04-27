@@ -1,0 +1,22 @@
+@page "/result"
+@using PersonalityTest.Frontend.Models
+@inject IUserSessions UserSessions
+@inject NavigationManager NavManager
+@rendermode InteractiveServer
+
+<head>
+    <PageTitle>Result</PageTitle>
+</head>
+
+<h1>@results</h1>
+
+@code
+{
+    private QuestionnareAnswers results;
+
+    protected override void OnInitialized()
+    {
+        results = UserSessions.GetUserState("TODOProvideUserId").CurrentAnswers;
+        Console.WriteLine("TEst");
+    }
+}

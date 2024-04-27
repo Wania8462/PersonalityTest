@@ -10,7 +10,9 @@ namespace PersonalityTest.Frontend.Models
         private readonly Dictionary<string, UserState> _sessions = [];
 
         public UserState? GetUserState(string userId) {
-            if (_sessions.ContainsKey(userId)) {return _sessions[userId];}
+            if (_sessions.ContainsKey(userId)) 
+                return _sessions[userId];
+                
             return null;
         }
 

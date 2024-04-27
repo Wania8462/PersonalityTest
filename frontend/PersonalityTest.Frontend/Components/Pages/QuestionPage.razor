@@ -2,6 +2,7 @@
 @using PersonalityTest.Frontend.Models
 @inject IUserSessions UserSessions
 @inject NavigationManager NavManager
+@rendermode InteractiveServer
 
 <head>
     <PageTitle>Question page</PageTitle>
@@ -9,26 +10,84 @@
 
 <h1>@QuestionText</h1>
 
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="StronglyNo" @onclick="@(answer => SelectOption(AnswerOptions.StronglyNo))">
+    <label class="form-check-label" for="StronglyNo">
+        Точно нет
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="MaybeNo" @onclick="@(answer => SelectOption(AnswerOptions.MaybeNo))">
+    <label class="form-check-label" for="MaybeNo">
+        Скорее нет
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Neutral" @onclick="@(answer => SelectOption(AnswerOptions.Neutral))">
+    <label class="form-check-label" for="Neutral">
+        Не знаю
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="MaybeYes" @onclick="@(answer => SelectOption(AnswerOptions.MaybeYes))">
+    <label class="form-check-label" for="MaybeYes">
+        Скорее да
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="StronglyYes" @onclick="@(answer => SelectOption(AnswerOptions.StronglyYes))">
+    <label class="form-check-label" for="StronglyYes">
+        Точно да
+    </label>
+</div>
+
+<button class="btn btn-success" @onclick="NextQuestion">Слейдущий вопрос</button>
+
 @code {
     public int id { get; set; }
+    public string QuestionText { get; set; }
 
+    private AnswerOptions answer = AnswerOptions.None;
+    private UserState? state = null;
+    private Question? question;
     private string userId = "TODOProvideUserId";
 
-    public string QuestionText {get; set;}
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
 
     protected override void OnInitialized()
     {
-        var session = UserSessions.GetUserState(userId);
-        if (session == null) {
+        bool firstRender = !(HttpContext is null);
+        if (firstRender) return;
+        
+        state = UserSessions.GetUserState(userId);
+
+        if (state == null)
+        {
             NavManager.NavigateTo("/");
             return;
         }
 
-        var question = session.GetNextQuestion();
-        if (question == null) {
-            // TODO: end of test, store results
-        }
-
+        question = state.GetNextQuestion();
         QuestionText = question.Text;
     }
-}    
+
+    private void NextQuestion()
+    {
+        if(answer != AnswerOptions.None)
+        {
+            if(state.SeeNextQuestion() != null)
+            {
+                state.SaveAnswer(question, answer);
+                NavManager.NavigateTo(NavManager.Uri, true);
+            }
+
+            else
+            {
+                NavManager.NavigateTo("/result");
+            }
+        }
+    }
+
+    private void SelectOption(AnswerOptions option) => answer = option;
+}

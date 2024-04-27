@@ -26,11 +26,20 @@ namespace PersonalityTest.Frontend.Models
         }
 
         public Question? GetNextQuestion() {
-            if (nextQuestion == CurrentTest.Questions.Count) { return null;}
+            if (nextQuestion == CurrentTest.Questions.Count) 
+                return null;
             
             var nextQ = CurrentTest.Questions[nextQuestion];
             nextQuestion++;
             return nextQ;
+        }
+
+        public Question? SeeNextQuestion() 
+        {
+            if (nextQuestion == CurrentTest.Questions.Count) 
+                return null;
+
+            return CurrentTest.Questions[nextQuestion];
         }
 
         public void SaveAnswer(Question question, AnswerOptions userAnswer) {

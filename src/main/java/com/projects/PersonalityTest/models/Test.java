@@ -13,22 +13,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Question {
+public class Test {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String questionText;
-
-    @ManyToOne
-    @JoinColumn(name = "test_id", referencedColumnName = "id")
-    private Test test;
+    private String name;
 
     @OneToMany(mappedBy = "question")
-    private List<Answer> answers;
-
-    public Question(String questionText, List<Answer> answers) {
-        this.questionText = questionText;
-        this.answers = answers;
-    }
+    private List<Question> questions;
 }

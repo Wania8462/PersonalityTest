@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface QuestionService {
     Question save(Question question);
-    Question create(QuestionRequest questionRequest);
+    Question save(QuestionRequest questionRequest);
     Question getById(Long id);
     List<Question> getAll();
     void deleteById(Long id);

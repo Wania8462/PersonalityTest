@@ -21,20 +21,13 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Question save(Question question) {
-        Question newQuestion = new Question(
-                question.getQuestionText(),
-                question.getPosition(),
-                question.getAnswers()
-        );
-
-        return questionRepository.save(newQuestion);
+        return questionRepository.save(question);
     }
 
     @Override
-    public Question create(QuestionRequest questionRequest) {
+    public Question save(QuestionRequest questionRequest) {
         Question question = Question.builder()
                 .questionText(questionRequest.getQuestionText())
-                .position(questionRequest.getPosition())
                 .answers(new ArrayList<>())
                 .build();
 
