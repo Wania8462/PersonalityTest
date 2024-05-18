@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj": {}
+    "C:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj": {
+    "C:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj",
+        "projectUniqueName": "C:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj",
         "projectName": "PersonalityTest.Frontend",
-        "projectPath": "c:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj",
+        "projectPath": "C:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\PersonalityTest.Frontend.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\obj\\",
+        "outputPath": "C:\\Users\\Ivan\\Documents\\GitHub\\PersonalityTest\\frontend\\PersonalityTest.Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -40,8 +42,8 @@
         }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -53,6 +55,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.2, 8.0.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

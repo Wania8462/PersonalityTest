@@ -1,0 +1,7 @@
+C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\bin\Release\net9.0\publish\PersonalityTest.Frontend.exe
+C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\bin\Release\net9.0\publish\appsettings.Development.json
+C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\bin\Release\net9.0\publish\appsettings.json
+C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\bin\Release\net9.0\publish\PersonalityTest.Frontend.dll
+C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\bin\Release\net9.0\publish\PersonalityTest.Frontend.deps.json
+C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\bin\Release\net9.0\publish\PersonalityTest.Frontend.runtimeconfig.json
+C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\bin\Release\net9.0\publish\PersonalityTest.Frontend.pdb

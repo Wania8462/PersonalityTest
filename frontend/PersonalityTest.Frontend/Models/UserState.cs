@@ -15,6 +15,7 @@ namespace PersonalityTest.Frontend.Models
         public string UserId { get; private set; }
         public Questionnaire CurrentTest { get; private set; }
         public QuestionnareAnswers CurrentAnswers { get; private set; }
+        public QuestionniareResults QuestionniareResults { get; set; }
 
         private int nextQuestion = 0;
  

@@ -30,3 +30,4 @@ C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend
 C:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\obj\Debug\net9.0\ref\PersonalityTest.Frontend.dll
 c:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\obj\Debug\net9.0\compressed\lf110e2v8h.gz
 c:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\obj\Debug\net9.0\compressed\u60szjjfrm.gz
+c:\Users\Ivan\Documents\GitHub\PersonalityTest\frontend\PersonalityTest.Frontend\obj\Debug\net9.0\scopedcss\Components\Pages\QuestionPage.razor.rz.scp.css

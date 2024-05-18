@@ -10,6 +10,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddScoped<IClient, DummyClient>();
 builder.Services.AddSingleton<IUserSessions, UserSessions>();
+builder.Services.AddSingleton<IResultsCalculator, ResultsCalculator>();
 
 var app = builder.Build();
 

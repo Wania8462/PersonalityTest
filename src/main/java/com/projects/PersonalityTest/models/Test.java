@@ -20,6 +20,6 @@ public class Test {
 
     private String name;
 
-    @OneToMany(mappedBy = "question")
+    @OneToMany(mappedBy = "test")
     private List<Question> questions;
 }

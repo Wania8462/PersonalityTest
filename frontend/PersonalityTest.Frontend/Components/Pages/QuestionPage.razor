@@ -8,40 +8,67 @@
     <PageTitle>Question page</PageTitle>
 </head>
 
-<h1>@QuestionText</h1>
-
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="StronglyNo" @onclick="@(answer => SelectOption(AnswerOptions.StronglyNo))">
-    <label class="form-check-label" for="StronglyNo">
-        Точно нет
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="MaybeNo" @onclick="@(answer => SelectOption(AnswerOptions.MaybeNo))">
-    <label class="form-check-label" for="MaybeNo">
-        Скорее нет
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Neutral" @onclick="@(answer => SelectOption(AnswerOptions.Neutral))">
-    <label class="form-check-label" for="Neutral">
-        Не знаю
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="MaybeYes" @onclick="@(answer => SelectOption(AnswerOptions.MaybeYes))">
-    <label class="form-check-label" for="MaybeYes">
-        Скорее да
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="StronglyYes" @onclick="@(answer => SelectOption(AnswerOptions.StronglyYes))">
-    <label class="form-check-label" for="StronglyYes">
-        Точно да
-    </label>
+<div class="navbar bg-dark">
+    <div class="container-fluid">
+        <span class="navbar-text text-white">
+            <a class="navbar-brand text-white" href="/">Home page</a>
+        </span>
+    </div>
 </div>
 
-<button class="btn btn-success" @onclick="NextQuestion">Слейдущий вопрос</button>
+<div class="d-flex flex-column min-vw-100" style="min-height: 93vh">
+    <div class="row d-flex align-middle flex-grow-1">
+        <div class="col-3" />
+        <div class="col-6 d-flex align-items-center justify-content-center">
+        <div class="flex-fill">
+            <div class="card" style="background-color: whitesmoke; margin-bottom: 16px; padding: 8px;">
+                <h2>@QuestionText</h2>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="StronglyNo"
+                        @onclick="@(answer => SelectOption(AnswerOptions.StronglyNo))">
+                    <label class="form-check-label" for="StronglyNo">
+                        Точно нет
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="MaybeNo"
+                        @onclick="@(answer => SelectOption(AnswerOptions.MaybeNo))">
+                    <label class="form-check-label" for="MaybeNo">
+                        Скорее нет
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Neutral"
+                        @onclick="@(answer => SelectOption(AnswerOptions.Neutral))">
+                    <label class="form-check-label" for="Neutral">
+                        Не знаю
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="MaybeYes"
+                        @onclick="@(answer => SelectOption(AnswerOptions.MaybeYes))">
+                    <label class="form-check-label" for="MaybeYes">
+                        Скорее да
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="StronglyYes"
+                        @onclick="@(answer => SelectOption(AnswerOptions.StronglyYes))">
+                    <label class="form-check-label" for="StronglyYes">
+                        Точно да
+                    </label>
+                </div>
+            </div>
+
+            <button class="btn btn-success" @onclick="NextQuestion">Слейдущий вопрос</button>
+        </div>
+        </div>
+        <div class="col-3 d-flex justify-content-end">
+            <h3>@currentQuestion/@questonniareLength</h3>
+        </div>
+    </div>
+</div>
 
 @code {
     public int id { get; set; }
@@ -51,6 +78,8 @@
     private UserState? state = null;
     private Question? question;
     private string userId = "TODOProvideUserId";
+    private int currentQuestion;
+    private int questonniareLength;
 
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
@@ -58,8 +87,9 @@
     protected override void OnInitialized()
     {
         bool firstRender = !(HttpContext is null);
-        if (firstRender) return;
-        
+        if (firstRender)
+            return;
+
         state = UserSessions.GetUserState(userId);
 
         if (state == null)
@@ -70,13 +100,15 @@
 
         question = state.GetNextQuestion();
         QuestionText = question.Text;
+        currentQuestion = question.Id;
+        questonniareLength = state.CurrentTest.Questions.Count;
     }
 
     private void NextQuestion()
     {
-        if(answer != AnswerOptions.None)
+        if (answer != AnswerOptions.None)
         {
-            if(state.SeeNextQuestion() != null)
+            if (state.SeeNextQuestion() != null)
             {
                 state.SaveAnswer(question, answer);
                 NavManager.NavigateTo(NavManager.Uri, true);
@@ -90,4 +122,6 @@
     }
 
     private void SelectOption(AnswerOptions option) => answer = option;
+
+    private void ToHomePage() => NavManager.NavigateTo("/");
 }

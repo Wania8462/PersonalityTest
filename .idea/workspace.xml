@@ -5,38 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9f538-96fd-4eed-b36f-0a5a8b176e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/TestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/repositories/TestRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/TestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/TestServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Layout/MainLayout.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Layout/MainLayout.razor.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/Home.razor" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/Home.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/QuestionPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/QuestionPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/RegisterPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/RegisterPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/ResultPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/ResultPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Components/Pages/Styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/AnswerOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/AnswerOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/Question.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/UserSessions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/UserSessions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/QuestionnareAnswers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/QuestionnareAnswers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/ResultsCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/ResultsCalculator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/UserState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Models/UserState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/PersonalityTest.Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/PersonalityTest.Frontend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/bin/Debug/net9.0/PersonalityTest.Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/bin/Debug/net9.0/PersonalityTest.Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/bin/Debug/net9.0/PersonalityTest.Frontend.exe" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/bin/Debug/net9.0/PersonalityTest.Frontend.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/bin/Debug/net9.0/PersonalityTest.Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/bin/Debug/net9.0/PersonalityTest.Frontend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/PersonalityTest.Frontend.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/compressed/lf110e2v8h.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/compressed/lf110e2v8h.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/compressed/u60szjjfrm.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/compressed/u60szjjfrm.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/project.razor.vscode.bin" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/project.razor.vscode.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/ref/PersonalityTest.Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/ref/PersonalityTest.Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/refint/PersonalityTest.Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/refint/PersonalityTest.Frontend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/QuestionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/QuestionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/QuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/scopedcss/Components/Layout/MainLayout.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/scopedcss/Components/Layout/MainLayout.razor.rz.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/scopedcss/bundle/PersonalityTest.Frontend.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/scopedcss/bundle/PersonalityTest.Frontend.styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/scopedcss/projectbundle/PersonalityTest.Frontend.bundle.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/Debug/net9.0/scopedcss/projectbundle/PersonalityTest.Frontend.bundle.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/PersonalityTest.Frontend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/PersonalityTest.Frontend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PersonalityTest.Frontend/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/PersonalityTest/services/implementations/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +183,12 @@
       <workItem from="1714069634334" duration="2664000" />
       <workItem from="1714219073962" duration="2000" />
       <workItem from="1714227773830" duration="29000" />
+      <workItem from="1714227897910" duration="3809000" />
+      <workItem from="1715433007138" duration="3000" />
+      <workItem from="1715436282139" duration="1441000" />
+      <workItem from="1715506006473" duration="9000" />
+      <workItem from="1715793253191" duration="17000" />
+      <workItem from="1715977117085" duration="1000" />
     </task>
     <servers />
   </component>

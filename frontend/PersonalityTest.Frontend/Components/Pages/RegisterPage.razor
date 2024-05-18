@@ -1,0 +1,54 @@
+@page "/register"
+@rendermode InteractiveServer
+
+<head>
+    <PageTitle>Register</PageTitle>
+</head>
+
+<div class="d-flex flex-column min-vw-100" style="min-height: 93vh">
+    <div class="d-flex align-middle flex-grow-1">
+        <div class="col-4" />
+        <div class="col-4 d-flex align-items-center justify-content-center">
+            <div class="flex-fill">
+                <form>
+                    <label for="firstname" class="form-label">firstname: </label>
+                    <input type="firstname" class="form-control" id="firstname">
+                </form>
+                <form>
+                    <label for="lastname" class="form-label">lastname: </label>
+                    <input type="lastname" class="form-control" id="lastname">
+                </form>
+                <form>
+                    <label for="email" class="form-label">Ваш email: </label>
+                    <input type="email" class="form-control" id="email">
+                </form>
+                <form>
+                    <label for="coach-email" class="form-label">Другий email, кому ви б хотіли надіслати результати: </label>
+                    <input type="coach-email" class="form-control" id="coach-email">
+                </form>
+                <form>
+                    <label for="working-status   " class="form-label">Ваш вид діяльності (підприємець, топ-менеджер, фрілансер тощо) </label>
+                    <input type="working-status" class="form-control" id="working-status">
+                </form>
+                <form>
+                    <label for="coach-email" class="form-label">Другий email, кому ви б хотіли надіслати результати: </label>
+                    <input type="coach-email" class="form-control" id="coach-email">
+                </form>
+
+                <button class="btn btn-success">Далі</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* @code {
+    public async Task Register() {
+        var client = new HttpClient();
+        var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8080/api/v1/register");
+        var content = new StringContent("{\r\n    \"firstname\": \"James\",\r\n    \"lastname\": \"Bond\",\r\n    \"email\": \"JamesBond@gmail.com\",\r\n    \"phone\": \"777777777777\"\r\n}", null, "application/json");
+        request.Content = content;
+        var response = await client.SendAsync(request);
+        response.EnsureSuccessStatusCode();
+        Console.WriteLine(await response.Content.ReadAsStringAsync());
+    }
+} *@

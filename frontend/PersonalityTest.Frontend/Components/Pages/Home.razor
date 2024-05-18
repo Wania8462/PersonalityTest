@@ -7,22 +7,43 @@
 @inject IUserSessions UserSessions
 @inject NavigationManager UriHelper
 
-<head>
-    <PageTitle>Home page</PageTitle>
-</head>
+<PageTitle>Home page</PageTitle>
 
-<div class="centerBox">
-    <button class="btn btn-primary" @onclick="StartTest">Test</button>
+<div class="navbar bg-dark">
+    <div class="container-fluid">
+        <span class="navbar-text text-white">
+            <a class="navbar-brand text-white" href="/">Home page</a>
+        </span>
+    </div>
+</div>
+
+<div class="d-flex flex-column" style="min-height: 93vh">
+    <div class="d-flex align-middle flex-grow-1">
+        <div class="col-5" />
+        <div class="col-2 d-flex align-items-center justify-content-center">
+            <div>
+                <div>
+                    <h2>Добро пожаловать!</h2>
+                </div>
+                <div>
+                    <button class="btn btn-primary w-100" width="100%" @onclick="StartTest">Начать тест</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @code {
     private string userId = "TODOProvideUserId";
 
-    private async void StartTest() {
+    private async void StartTest()
+    {
         var state = UserSessions.AddUserState(userId);
         var questionnaire = await BackEndClient.GetQuestionnaire("test");
         state.StartTest(questionnaire);
 
         NavManager.NavigateTo("/question");
     }
+
+    private void ToHomePage() => NavManager.NavigateTo("/");
 }

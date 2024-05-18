@@ -2,21 +2,45 @@
 @using PersonalityTest.Frontend.Models
 @inject IUserSessions UserSessions
 @inject NavigationManager NavManager
+@inject IResultsCalculator ResultsCalculator
 @rendermode InteractiveServer
 
 <head>
-    <PageTitle>Result</PageTitle>
+    <PageTitle>Results</PageTitle>
 </head>
 
-<h1>@results</h1>
+<h1>Открытость: @openness</h1>
+<h1>Кропотливость: @painstakingness</h1>
+<h1>Экстроверсия: @extroversion</h1>
+<h1>Аккомодация: @accommodation</h1>
+<h1>Невротизм: @neuroticism</h1>
 
 @code
 {
-    private QuestionnareAnswers results;
+    private float openness;
+    private float painstakingness;
+    private float extroversion;
+    private float accommodation;
+    private float neuroticism;
+
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
 
     protected override void OnInitialized()
     {
-        results = UserSessions.GetUserState("TODOProvideUserId").CurrentAnswers;
-        Console.WriteLine("TEst");
+        bool firstRender = !(HttpContext is null);
+        if (firstRender) 
+            return;
+
+        // TODO: handle the null exception
+        UserState userState = UserSessions.GetUserState("TODOProvideUserId");
+        QuestionniareResults results = ResultsCalculator.CalculateResults(userState.CurrentAnswers, userState.CurrentTest);
+        userState.QuestionniareResults = results;
+
+        openness = results.openness;
+        painstakingness = results.painstakingness;
+        extroversion = results.extroversion;
+        accommodation = results.accommodation;
+        neuroticism = results.neuroticism;
     }
 }

@@ -2,11 +2,11 @@ namespace PersonalityTest.Frontend.Models
 {
     public enum AnswerOptions
     {
-        None = -9,
-        StronglyNo = -2,
-        MaybeNo = -1,
-        Neutral = 0,
-        MaybeYes = 1,
-        StronglyYes = 2
+        None = 0,
+        StronglyNo = 1,
+        MaybeNo = 2,
+        Neutral = 3,
+        MaybeYes = 4,
+        StronglyYes = 5
     }
 }

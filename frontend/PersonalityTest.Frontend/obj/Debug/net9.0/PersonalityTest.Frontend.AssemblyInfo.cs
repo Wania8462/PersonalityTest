@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonalityTest.Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f07f5dfabaadfa272da9c5a482d1ee13909d6d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3d4f558e67f8cbb74e7093f010b43523cf7c53d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonalityTest.Frontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonalityTest.Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

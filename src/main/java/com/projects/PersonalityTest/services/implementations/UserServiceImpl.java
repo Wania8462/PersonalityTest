@@ -27,10 +27,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public User create(UserDTO userDTO) {
         User user = User.builder()
-                .firstname(userDTO.getFirstname())
-                .lastname(userDTO.getLastname())
                 .email(userDTO.getEmail())
-                .phone(userDTO.getPhone())
+                .coachEmail(userDTO.getCoachEmail())
                 .roles(ERole.USER)
                 .build();
 
@@ -41,10 +39,8 @@ public class UserServiceImpl implements UserService {
     public User update(Long id, UserDTO userDTO) {
         User user = User.builder()
                 .id(id)
-                .firstname(userDTO.getFirstname())
-                .lastname(userDTO.getLastname())
                 .email(userDTO.getEmail())
-                .phone(userDTO.getPhone())
+                .coachEmail(userDTO.getCoachEmail())
                 .build();
 
         return userRepository.save(user);
